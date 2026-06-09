@@ -153,7 +153,13 @@ export default function Ventas() {
           </div>
           <div className="ventas__form-field">
             <label>Cantidad <span className="required">*</span></label>
-            <input type="number" step="0.1" placeholder="Toneladas" />
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <input type="number" step="0.1" placeholder="Ej: 100" style={{ flex: 1 }} />
+              <select style={{ width: '130px' }}>
+                <option value="ton">Toneladas</option>
+                <option value="kg">Kg</option>
+              </select>
+            </div>
           </div>
           <div className="ventas__form-field">
             <label>Precio Unitario ($) <span className="required">*</span></label>

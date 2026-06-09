@@ -28,7 +28,7 @@ export default function Login() {
 
       <div className="login-card">
         <div className="login-card__header">
-          <img src="/logo.png" alt="AgroLaz" className="login-card__logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AgroLaz" className="login-card__logo" />
           <h1 className="login-card__title">Bienvenido a AgroLaz</h1>
           <p className="login-card__subtitle">Gestión Agrícola Inteligente</p>
         </div>

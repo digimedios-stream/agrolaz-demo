@@ -38,7 +38,7 @@ export default function Sidebar() {
       <aside className={`sidebar ${mobileOpen ? 'sidebar--open' : ''}`}>
         <div className="sidebar__top">
           <div className="sidebar__brand">
-            <img src="/logo.png" alt="AgroLaz" className="sidebar__logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AgroLaz" className="sidebar__logo" />
             <div className="sidebar__brand-text">
               <span className="sidebar__brand-name">AgroLaz</span>
               <span className="sidebar__brand-sub">Gestión Agrícola</span>

@@ -1,0 +1,311 @@
+.agroquimicos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.agroquimicos__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.agroquimicos__header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.agroquimicos__alertas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.agroquimicos__alerta {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+}
+
+.agroquimicos__alerta--danger {
+  background: var(--danger-light);
+  border-color: var(--danger);
+  color: #991B1B;
+}
+
+.agroquimicos__alerta--warning {
+  background: var(--warning-light);
+  border-color: var(--warning);
+  color: #92400E;
+}
+
+[data-theme="dark"] .agroquimicos__alerta--danger { color: #FCA5A5; }
+[data-theme="dark"] .agroquimicos__alerta--warning { color: #FCD34D; }
+
+.agroquimicos__alerta-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.agroquimicos__alerta strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.agroquimicos__alerta p {
+  font-size: var(--font-size-sm);
+  color: inherit;
+  opacity: 0.85;
+}
+
+.agroquimicos__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+/* Table */
+.agroquimicos__table-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: background var(--transition-theme);
+}
+
+.agroquimicos__table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.agroquimicos__table-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.agroquimicos__select {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  width: auto;
+}
+
+.agroquimicos__table-scroll { overflow-x: auto; }
+
+.agroquimicos__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.agroquimicos__table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
+  white-space: nowrap;
+}
+
+.agroquimicos__table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.agroquimicos__table tbody tr { transition: background var(--transition); }
+.agroquimicos__table tbody tr:hover { background: var(--primary-light); }
+
+.agroquimicos__row--danger {
+  background: var(--danger-light) !important;
+}
+
+.agroquimicos__stock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 120px;
+}
+
+.agroquimicos__stock-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.agroquimicos__stock-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+.agroquimicos__stock-fill--success { background: var(--success); }
+.agroquimicos__stock-fill--warning { background: var(--warning); }
+.agroquimicos__stock-fill--danger { background: var(--danger); }
+
+.agroquimicos__actions {
+  display: flex;
+  gap: 4px;
+}
+
+.agroquimicos__action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.agroquimicos__action-btn:hover { background: var(--surface-hover); color: var(--text); }
+.agroquimicos__action-btn--danger:hover { color: var(--danger); background: var(--danger-light); }
+
+.agroquimicos__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.agroquimicos__pages { display: flex; gap: 4px; }
+
+.agroquimicos__page-btn {
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.agroquimicos__page-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Bottom */
+.agroquimicos__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.agroquimicos__vencimientos,
+.agroquimicos__categorias {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: background var(--transition-theme);
+}
+
+.agroquimicos__vencimientos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.agroquimicos__vencimiento-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+}
+
+.agroquimicos__vencimiento-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--danger-light);
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.agroquimicos__vencimiento-item > div:nth-child(2) {
+  flex: 1;
+}
+
+.agroquimicos__cat-item {
+  margin-bottom: 16px;
+}
+
+.agroquimicos__cat-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.agroquimicos__cat-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.agroquimicos__cat-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* Form */
+.agroquimicos__form { display: flex; flex-direction: column; gap: var(--space-md); }
+.agroquimicos__form-field { display: flex; flex-direction: column; }
+.agroquimicos__form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.agroquimicos__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  .agroquimicos__stats { grid-template-columns: repeat(2, 1fr); }
+  .agroquimicos__alertas { grid-template-columns: 1fr; }
+  .agroquimicos__bottom { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .agroquimicos__header { flex-direction: column; }
+  .agroquimicos__stats { grid-template-columns: 1fr; }
+  .agroquimicos__form-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,102 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-lg);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay--drawer {
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: scaleIn 0.3s ease-out;
+  border: 1px solid var(--border);
+}
+
+.modal--sm { width: 400px; }
+.modal--md { width: 560px; }
+.modal--lg { width: 720px; }
+
+.modal--drawer {
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  height: 100vh;
+  max-height: 100vh;
+  width: 480px;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 1;
+}
+
+.modal__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.modal__close:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.modal__body {
+  padding: var(--space-lg);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .modal {
+    width: 100% !important;
+    max-height: 85vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    margin-top: auto;
+  }
+  .modal__header {
+    padding: var(--space-md) 20px;
+  }
+  .modal__body {
+    padding: var(--space-md) 20px var(--space-xl);
+  }
+  .modal--drawer {
+    width: 100% !important;
+    border-radius: 0;
+  }
+}

@@ -96,7 +96,7 @@ export default function Login() {
       </div>
 
       <footer className="login-page__footer">
-        © 2024 AgroLaz Gestión Agrícola. Todos los derechos reservados.
+        AgroLaz Gestión Agrícola © 2024 Digimedios Apps - Todos los derechos reservados.
       </footer>
     </div>
   );

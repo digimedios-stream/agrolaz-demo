@@ -30,11 +30,11 @@ export default function Produccion() {
     },
     { header: 'Variedad', accessor: 'variedad' },
     {
-      header: 'Lote / Superficie',
+      header: 'Lote / Naves',
       render: (row) => (
         <div>
           <div className="font-semibold">{row.lote}</div>
-          <div className="text-sm text-secondary">{row.superficie}</div>
+          <div className="text-sm text-secondary">{row.naves}</div>
         </div>
       ),
     },
@@ -103,9 +103,9 @@ export default function Produccion() {
         <StatCard
           icon={Sprout}
           iconBg="primary"
-          title="Superficie Total Activa"
+          title="Naves Totales Activas"
           value={produccionStats.superficie.value}
-          label="Ha"
+          label="Naves"
         >
           <span className="text-sm text-success">⤴ {produccionStats.superficie.trend}</span>
         </StatCard>
@@ -125,7 +125,7 @@ export default function Produccion() {
           <div className="produccion__health-bar">
             <div className="produccion__health-fill" style={{ width: `${produccionStats.estadoSalud.percentage}%` }} />
           </div>
-          <span className="text-xs text-secondary">{produccionStats.estadoSalud.percentage}% de la superficie sin alertas críticas</span>
+          <span className="text-xs text-secondary">{produccionStats.estadoSalud.percentage}% de las naves sin alertas críticas</span>
         </StatCard>
       </div>
 
@@ -186,8 +186,8 @@ export default function Produccion() {
               <select><option value="">Seleccionar...</option><option>Lote A-12</option><option>Lote B-04</option><option>Lote C-09</option></select>
             </div>
             <div className="produccion__form-field">
-              <label>Superficie (Ha) <span className="required">*</span></label>
-              <input type="number" step="0.1" placeholder="0.0" />
+              <label>Cant. Naves <span className="required">*</span></label>
+              <input type="number" step="1" placeholder="Ej: 5" />
             </div>
           </div>
           <div className="produccion__form-field">

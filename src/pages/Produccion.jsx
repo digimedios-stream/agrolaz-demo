@@ -39,6 +39,7 @@ export default function Produccion() {
       ),
     },
     { header: 'Fecha Siembra', accessor: 'fechaSiembra' },
+    { header: 'Fecha Cultivo Aprox.', accessor: 'fechaCultivo' },
     ...(activeTab === 'Cosechados'
       ? [{
           header: 'Rendimiento',

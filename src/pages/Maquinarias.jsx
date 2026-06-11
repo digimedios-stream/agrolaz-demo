@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Tractor, CheckCircle, Wrench, AlertCircle, Clock, Eye, Edit, AlertTriangle, Image as ImageIcon } from 'lucide-react';
+import { Plus, Tractor, CheckCircle, Wrench, AlertCircle, Clock, Eye, Edit, AlertTriangle, Image as ImageIcon, DollarSign } from 'lucide-react';
 import StatCard from '../components/StatCard';
 import Badge from '../components/Badge';
 import Button from '../components/Button';
@@ -15,6 +15,7 @@ const estadoIcons = {
 
 export default function Maquinarias() {
   const [showModal, setShowModal] = useState(false);
+  const [showGastoModal, setShowGastoModal] = useState(false);
 
   return (
     <div className="maquinarias">
@@ -111,8 +112,8 @@ export default function Maquinarias() {
               </div>
 
               <div className="maquinarias__card-actions">
-                <button className="maquinarias__action">
-                  <Eye size={14} /> Detalle
+                <button className="maquinarias__action" onClick={() => setShowGastoModal(true)}>
+                  <DollarSign size={14} /> Gasto
                 </button>
                 <button className="maquinarias__action">
                   <Edit size={14} /> Editar
@@ -154,6 +155,44 @@ export default function Maquinarias() {
           <div className="maquinarias__form-actions">
             <Button variant="outline" onClick={() => setShowModal(false)}>Cancelar</Button>
             <Button variant="primary" type="submit">Guardar Maquinaria</Button>
+          </div>
+        </form>
+      </Modal>
+
+      <Modal isOpen={showGastoModal} onClose={() => setShowGastoModal(false)} title="Registrar Gasto de Maquinaria">
+        <form className="maquinarias__form" onSubmit={(e) => { e.preventDefault(); setShowGastoModal(false); }}>
+          <div className="maquinarias__form-field">
+            <label>Tipo de Gasto <span className="required">*</span></label>
+            <select required>
+              <option value="">Seleccionar...</option>
+              <option>Service Programado</option>
+              <option>Reparación Correctiva</option>
+              <option>Cambio de Insumos (Aceite, Filtros)</option>
+              <option>Cambio de Cubiertas</option>
+              <option>Combustible</option>
+            </select>
+          </div>
+          <div className="maquinarias__form-row">
+            <div className="maquinarias__form-field">
+              <label>Costo Total ($) <span className="required">*</span></label>
+              <input type="number" placeholder="Ej: 150000" required />
+            </div>
+            <div className="maquinarias__form-field">
+              <label>Fecha del Gasto <span className="required">*</span></label>
+              <input type="date" required />
+            </div>
+          </div>
+          <div className="maquinarias__form-field">
+            <label>Taller / Proveedor (Opcional)</label>
+            <input type="text" placeholder="Ej: Taller Don Juan" />
+          </div>
+          <div className="maquinarias__form-field">
+            <label>Detalles de la Factura o Trabajo</label>
+            <textarea rows="3" placeholder="Describe qué se le hizo a la máquina..."></textarea>
+          </div>
+          <div className="maquinarias__form-actions" style={{ marginTop: '24px' }}>
+            <Button variant="outline" onClick={() => setShowGastoModal(false)}>Cancelar</Button>
+            <Button variant="primary" type="submit" icon={DollarSign}>Registrar Gasto</Button>
           </div>
         </form>
       </Modal>

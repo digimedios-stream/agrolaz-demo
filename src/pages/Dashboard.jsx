@@ -8,7 +8,7 @@ import { Bar, Doughnut } from 'react-chartjs-2';
 import StatCard from '../components/StatCard';
 import Badge from '../components/Badge';
 import {
-  dashboardStats, ventasMensuales, produccionPorHortaliza, ultimasActividades
+  dashboardStats, balanceMensual, produccionPorHortaliza, ultimasActividades
 } from '../data/mockData';
 import { useTheme } from '../context/ThemeContext';
 import './Dashboard.css';
@@ -20,21 +20,34 @@ export default function Dashboard() {
   const isDark = theme === 'dark';
 
   const barData = {
-    labels: ventasMensuales.map(v => v.mes),
-    datasets: [{
-      label: 'Ventas ($)',
-      data: ventasMensuales.map(v => v.valor),
-      backgroundColor: '#2D6A4F',
-      borderRadius: 6,
-      maxBarThickness: 40,
-    }],
+    labels: balanceMensual.map(b => b.mes),
+    datasets: [
+      {
+        label: 'Ingresos ($)',
+        data: balanceMensual.map(b => b.ingresos),
+        backgroundColor: '#2D6A4F',
+        borderRadius: 4,
+        maxBarThickness: 25,
+      },
+      {
+        label: 'Gastos / Egresos ($)',
+        data: balanceMensual.map(b => b.egresos),
+        backgroundColor: '#E63946',
+        borderRadius: 4,
+        maxBarThickness: 25,
+      }
+    ],
   };
 
   const barOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { display: false },
+      legend: { 
+        display: true, 
+        position: 'top',
+        labels: { color: isDark ? '#9CA3AF' : '#6B7280', font: { family: 'Inter' } }
+      },
       tooltip: {
         backgroundColor: isDark ? '#374151' : '#1B1B1B',
         titleColor: '#fff',
@@ -131,7 +144,7 @@ export default function Dashboard() {
       <div className="dashboard__charts">
         <div className="dashboard__chart-card">
           <div className="dashboard__chart-header">
-            <h3>Ventas Mensuales</h3>
+            <h3>Balance General (Ingresos vs Egresos)</h3>
             <select className="dashboard__chart-select">
               <option>Últimos 6 meses</option>
             </select>

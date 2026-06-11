@@ -18,13 +18,13 @@ export const dashboardStats = {
   maquinarias: { value: 8, label: 'Máquinas', alert: '2 Mant.', alertType: 'warning' },
 };
 
-export const ventasMensuales = [
-  { mes: 'Ene', valor: 62000 },
-  { mes: 'Feb', valor: 71000 },
-  { mes: 'Mar', valor: 58000 },
-  { mes: 'Abr', valor: 82000 },
-  { mes: 'May', valor: 93000 },
-  { mes: 'Jun', valor: 108000 },
+export const balanceMensual = [
+  { mes: 'Ene', ingresos: 62000, egresos: 40000 },
+  { mes: 'Feb', ingresos: 71000, egresos: 42000 },
+  { mes: 'Mar', ingresos: 58000, egresos: 45000 },
+  { mes: 'Abr', ingresos: 82000, egresos: 38000 },
+  { mes: 'May', ingresos: 93000, egresos: 41000 },
+  { mes: 'Jun', ingresos: 108000, egresos: 52000 },
 ];
 
 export const produccionPorHortaliza = [

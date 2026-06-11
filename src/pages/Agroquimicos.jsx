@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Download, FlaskConical, AlertTriangle, Calendar, ClipboardCheck, Edit, Trash2 } from 'lucide-react';
+import { Plus, Download, FlaskConical, AlertTriangle, Calendar, ClipboardCheck, Edit, Trash2, Droplets } from 'lucide-react';
 import StatCard from '../components/StatCard';
 import Badge from '../components/Badge';
 import Button from '../components/Button';
@@ -9,6 +9,7 @@ import './Agroquimicos.css';
 
 export default function Agroquimicos() {
   const [showModal, setShowModal] = useState(false);
+  const [showAplicacionModal, setShowAplicacionModal] = useState(false);
   const [page, setPage] = useState(1);
 
   return (
@@ -20,6 +21,7 @@ export default function Agroquimicos() {
         </div>
         <div className="agroquimicos__header-actions">
           <Button variant="outline" icon={Download}>Reporte Stock</Button>
+          <Button variant="outline" icon={Droplets} onClick={() => setShowAplicacionModal(true)}>Registrar Aplicación</Button>
           <Button variant="primary" icon={Plus} onClick={() => setShowModal(true)}>
             Ingresar Compra
           </Button>
@@ -186,6 +188,57 @@ export default function Agroquimicos() {
           <div className="agroquimicos__form-actions">
             <Button variant="outline" onClick={() => setShowModal(false)}>Cancelar</Button>
             <Button variant="primary" type="submit">Guardar Producto</Button>
+          </div>
+        </form>
+      </Modal>
+
+      <Modal isOpen={showAplicacionModal} onClose={() => setShowAplicacionModal(false)} title="Registrar Aplicación a Cultivo">
+        <form className="agroquimicos__form" onSubmit={(e) => { e.preventDefault(); setShowAplicacionModal(false); }}>
+          <div className="agroquimicos__form-field">
+            <label>Cultivo / Lote Destino <span className="required">*</span></label>
+            <select required>
+              <option value="">Seleccionar...</option>
+              <option>Lote A-12 - Tomate Cherry</option>
+              <option>Lote B-04 - Lechuga Romana</option>
+              <option>Lote C-09 - Zanahoria</option>
+              <option>Lote D-07 - Pimiento</option>
+            </select>
+          </div>
+          <div className="agroquimicos__form-field">
+            <label>Insumo a Aplicar <span className="required">*</span></label>
+            <select required>
+              <option value="">Seleccionar del inventario...</option>
+              <option>Glifosato 48% SL (Stock: 250 L)</option>
+              <option>Urea Granulada (Stock: 5.500 Kg)</option>
+              <option>Abamectina 1.8% (Stock: 45 L)</option>
+              <option>Fosfato Monoamónico (Stock: 2.200 Kg)</option>
+            </select>
+          </div>
+          <div className="agroquimicos__form-row">
+            <div className="agroquimicos__form-field">
+              <label>Cantidad Aplicada <span className="required">*</span></label>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input type="number" step="0.1" placeholder="Ej: 15" required style={{ flex: 1 }} />
+                <select style={{ width: '80px' }}>
+                  <option>L</option>
+                  <option>Kg</option>
+                  <option>Gr</option>
+                  <option>Cc</option>
+                </select>
+              </div>
+            </div>
+            <div className="agroquimicos__form-field">
+              <label>Fecha de Aplicación <span className="required">*</span></label>
+              <input type="date" required />
+            </div>
+          </div>
+          <div className="agroquimicos__form-field">
+            <label>Observaciones / Maquinaria</label>
+            <textarea rows="2" placeholder="Ej: Aplicado con Pulverizadora Pla Map 3..." />
+          </div>
+          <div className="agroquimicos__form-actions" style={{ marginTop: '24px' }}>
+            <Button variant="outline" onClick={() => setShowAplicacionModal(false)}>Cancelar</Button>
+            <Button variant="primary" type="submit" icon={Droplets}>Registrar Aplicación</Button>
           </div>
         </form>
       </Modal>

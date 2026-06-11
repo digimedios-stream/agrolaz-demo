@@ -208,7 +208,11 @@ export default function Combustible() {
           )}
 
           <div className="combustible__form-field mt-md">
-            <label>Evidencia (Foto del Surtidor / Ticket)</label>
+            <label>
+              {tipoMovimiento === 'consumo' 
+                ? 'Evidencia (Foto del Odómetro / Horómetro) (Opcional)' 
+                : 'Evidencia (Foto del Surtidor / Ticket)'}
+            </label>
             <div className="combustible__upload-zone">
               <ImageIcon size={32} className="text-secondary mb-sm" />
               <p className="text-sm">Arrastra la imagen o haz clic para subir</p>

@@ -174,7 +174,16 @@ export default function Agroquimicos() {
           <div className="agroquimicos__form-row">
             <div className="agroquimicos__form-field">
               <label>Stock Inicial <span className="required">*</span></label>
-              <input type="number" placeholder="Cantidad" />
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input type="number" placeholder="Cantidad" style={{ flex: 1 }} />
+                <select style={{ width: '90px' }}>
+                  <option>L</option>
+                  <option>Kg</option>
+                  <option>Unid.</option>
+                  <option>Gr</option>
+                  <option>Cc</option>
+                </select>
+              </div>
             </div>
             <div className="agroquimicos__form-field">
               <label>Stock Mínimo <span className="required">*</span></label>

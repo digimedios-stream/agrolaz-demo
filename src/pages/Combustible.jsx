@@ -171,6 +171,9 @@ export default function Combustible() {
                   <input type="text" placeholder="Ej: 1250 hs" required />
                 </div>
               </div>
+              <div style={{ marginTop: '8px', padding: '12px', backgroundColor: '#FEF3C7', border: '1px solid #FDE68A', borderRadius: '6px', fontSize: '13px', color: '#92400E' }}>
+                <strong>Info:</strong> El costo de este despacho se calculará usando el precio promedio de compra y se asignará automáticamente como Gasto Operativo a la maquinaria seleccionada.
+              </div>
             </>
           ) : (
             <>
@@ -193,9 +196,13 @@ export default function Combustible() {
                   <input type="number" step="0.1" placeholder="Ej: 3000" required />
                 </div>
                 <div className="combustible__form-field">
-                  <label>Nº Remito / Factura</label>
-                  <input type="text" placeholder="Ej: 0001-00001234" />
+                  <label>Costo Total ($) <span className="required">*</span></label>
+                  <input type="number" step="0.01" placeholder="Ej: 3000000" required />
                 </div>
+              </div>
+              <div className="combustible__form-field">
+                <label>Nº Remito / Factura</label>
+                <input type="text" placeholder="Ej: 0001-00001234" />
               </div>
             </>
           )}

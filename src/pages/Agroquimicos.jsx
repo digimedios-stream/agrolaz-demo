@@ -181,9 +181,21 @@ export default function Agroquimicos() {
               <input type="number" placeholder="Alerta cuando baje" />
             </div>
           </div>
-          <div className="agroquimicos__form-field">
-            <label>Fecha de Vencimiento <span className="required">*</span></label>
-            <input type="date" />
+          <div className="agroquimicos__form-row">
+            <div className="agroquimicos__form-field">
+              <label>Cultivo Destino (Opcional)</label>
+              <select>
+                <option value="">Uso General / Sin asignar</option>
+                <option>Lote A-12 - Tomate Cherry</option>
+                <option>Lote B-04 - Lechuga Romana</option>
+                <option>Lote C-09 - Zanahoria</option>
+                <option>Lote D-07 - Pimiento</option>
+              </select>
+            </div>
+            <div className="agroquimicos__form-field">
+              <label>Fecha de Vencimiento <span className="required">*</span></label>
+              <input type="date" />
+            </div>
           </div>
           <div className="agroquimicos__form-actions">
             <Button variant="outline" onClick={() => setShowModal(false)}>Cancelar</Button>

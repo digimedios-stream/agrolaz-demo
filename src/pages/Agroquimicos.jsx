@@ -164,7 +164,7 @@ export default function Agroquimicos() {
           <div className="agroquimicos__form-row">
             <div className="agroquimicos__form-field">
               <label>Tipo <span className="required">*</span></label>
-              <select><option value="">Seleccionar...</option><option>Agroquímico (Herbicida)</option><option>Agroquímico (Fertilizante)</option><option>Empaque y Cosecha (Cajones, Bolsas)</option><option>Riego y Suelo</option><option>Herramientas y Varios</option></select>
+              <select><option value="">Seleccionar...</option><option>Semillas y Plantines</option><option>Agroquímico (Herbicida)</option><option>Agroquímico (Fertilizante)</option><option>Empaque y Cosecha (Cajones, Bolsas)</option><option>Riego y Suelo</option><option>Herramientas y Varios</option></select>
             </div>
             <div className="agroquimicos__form-field">
               <label>N° de Lote</label>

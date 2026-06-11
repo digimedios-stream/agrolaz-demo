@@ -160,6 +160,7 @@ export default function Ventas() {
                 <option value="kg">Kg</option>
                 <option value="unidades">Unidades</option>
                 <option value="bolsas">Bolsas</option>
+                <option value="cajones">Cajones</option>
               </select>
             </div>
           </div>

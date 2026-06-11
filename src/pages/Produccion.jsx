@@ -219,6 +219,7 @@ export default function Produccion() {
                 <option>Kg</option>
                 <option>Unidades</option>
                 <option>Bolsas</option>
+                <option>Cajones</option>
               </select>
             </div>
           </div>

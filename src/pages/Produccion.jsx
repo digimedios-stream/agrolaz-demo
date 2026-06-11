@@ -214,9 +214,11 @@ export default function Produccion() {
             <label>Rendimiento Total <span className="required">*</span></label>
             <div style={{ display: 'flex', gap: '8px' }}>
               <input type="number" step="0.1" placeholder="Ej: 15.5" required style={{ flex: 1 }} />
-              <select style={{ width: '100px' }}>
+              <select style={{ width: '110px' }}>
                 <option>Ton</option>
                 <option>Kg</option>
+                <option>Unidades</option>
+                <option>Bolsas</option>
               </select>
             </div>
           </div>

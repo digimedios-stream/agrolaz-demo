@@ -158,6 +158,8 @@ export default function Ventas() {
               <select style={{ width: '130px' }}>
                 <option value="ton">Toneladas</option>
                 <option value="kg">Kg</option>
+                <option value="unidades">Unidades</option>
+                <option value="bolsas">Bolsas</option>
               </select>
             </div>
           </div>

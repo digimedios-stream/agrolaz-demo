@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Download, FlaskConical, AlertTriangle, Calendar, ClipboardCheck, Edit, Trash2, Droplets } from 'lucide-react';
+import { Plus, Download, FlaskConical, AlertTriangle, Calendar, ClipboardCheck, Edit, Trash2, Droplets, Archive } from 'lucide-react';
 import StatCard from '../components/StatCard';
 import Badge from '../components/Badge';
 import Button from '../components/Button';
@@ -16,7 +16,7 @@ export default function Agroquimicos() {
     <div className="agroquimicos">
       <div className="agroquimicos__header">
         <div>
-          <h1>Agroquímicos e Inventario</h1>
+          <h1>Inventario e Insumos</h1>
           <p>Control centralizado de insumos, aplicaciones y cumplimiento normativo.</p>
         </div>
         <div className="agroquimicos__header-actions">
@@ -50,7 +50,7 @@ export default function Agroquimicos() {
       </div>
 
       <div className="agroquimicos__stats">
-        <StatCard icon={FlaskConical} iconBg="primary" title="Valor Inventario" value={agroquimicosStats.valorInventario.value}>
+        <StatCard icon={Archive} iconBg="primary" title="Valor Inventario" value={agroquimicosStats.valorInventario.value}>
           <span className="text-sm text-success">⤴ {agroquimicosStats.valorInventario.trend}</span>
         </StatCard>
         <StatCard icon={FlaskConical} iconBg="success" title="Insumos Activos" value={agroquimicosStats.insumosActivos.value} label={agroquimicosStats.insumosActivos.label} />
@@ -164,7 +164,7 @@ export default function Agroquimicos() {
           <div className="agroquimicos__form-row">
             <div className="agroquimicos__form-field">
               <label>Tipo <span className="required">*</span></label>
-              <select><option value="">Seleccionar...</option><option>Herbicida</option><option>Fertilizante</option><option>Insecticida</option><option>Fungicida</option></select>
+              <select><option value="">Seleccionar...</option><option>Agroquímico (Herbicida)</option><option>Agroquímico (Fertilizante)</option><option>Empaque y Cosecha (Cajones, Bolsas)</option><option>Riego y Suelo</option><option>Herramientas y Varios</option></select>
             </div>
             <div className="agroquimicos__form-field">
               <label>N° de Lote</label>

@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Sprout, Receipt, FlaskConical, Tractor,
-  Users, Shield, Settings, Plus, HelpCircle, LogOut, Menu, X, Fuel
+  Users, Shield, Settings, Plus, HelpCircle, LogOut, Menu, X, Fuel, Archive
 } from 'lucide-react';
 import { useState } from 'react';
 import { currentUser } from '../data/mockData';
@@ -11,7 +11,7 @@ const navItems = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/produccion', icon: Sprout, label: 'Producción' },
   { to: '/ventas', icon: Receipt, label: 'Ventas' },
-  { to: '/agroquimicos', icon: FlaskConical, label: 'Agroquímicos' },
+  { to: '/agroquimicos', icon: Archive, label: 'Inventario' },
   { to: '/maquinarias', icon: Tractor, label: 'Maquinarias' },
   { to: '/combustible', icon: Fuel, label: 'Combustible' },
   { to: '/personal', icon: Users, label: 'Personal' },

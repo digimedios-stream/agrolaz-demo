@@ -324,6 +324,32 @@ export const agroquimicos = [
     estadoType: 'success',
     vencimiento: '15/09/2026',
   },
+  {
+    id: 5,
+    producto: 'Cajones Plásticos (Bins)',
+    lote: '#CAJ-102',
+    tipo: 'Empaque',
+    tipoColor: 'info',
+    stockActual: '120 Unidades',
+    stockMin: '50 Unidades',
+    porcentaje: 80,
+    estado: 'Óptimo',
+    estadoType: 'success',
+    vencimiento: '-',
+  },
+  {
+    id: 6,
+    producto: 'Bolsas Red Zapallo 20kg',
+    lote: '#BOL-301',
+    tipo: 'Empaque',
+    tipoColor: 'info',
+    stockActual: '5.000 Unidades',
+    stockMin: '1.000 Unidades',
+    porcentaje: 100,
+    estado: 'Óptimo',
+    estadoType: 'success',
+    vencimiento: '-',
+  },
 ];
 
 export const proximosVencimientos = [
@@ -332,10 +358,10 @@ export const proximosVencimientos = [
 ];
 
 export const categoriasResumen = [
-  { nombre: 'Herbicidas', porcentaje: 45, color: '#EE9B00' },
+  { nombre: 'Herbicidas', porcentaje: 35, color: '#EE9B00' },
   { nombre: 'Fertilizantes', porcentaje: 30, color: '#2D6A4F' },
-  { nombre: 'Insecticidas', porcentaje: 15, color: '#EE9B00' },
-  { nombre: 'Otros', porcentaje: 10, color: '#9CA3AF' },
+  { nombre: 'Empaque', porcentaje: 20, color: '#0077B6' },
+  { nombre: 'Insecticidas', porcentaje: 15, color: '#9CA3AF' },
 ];
 
 // --- Maquinarias ---

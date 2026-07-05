@@ -128,7 +128,7 @@ export default function Maquinarias() {
         <form className="maquinarias__form" onSubmit={(e) => { e.preventDefault(); setShowModal(false); }}>
           <div className="maquinarias__form-field">
             <label>Nombre / Modelo <span className="required">*</span></label>
-            <input type="text" placeholder="Ej: Tractor John Deere 5075E" />
+            <input type="text" placeholder="Ej: Tractor 1 Fiat R60" />
           </div>
           <div className="maquinarias__form-row">
             <div className="maquinarias__form-field">

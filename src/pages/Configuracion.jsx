@@ -15,12 +15,12 @@ export default function Configuracion() {
   const [activeTab, setActiveTab] = useState('empresa');
   const [showEspecieModal, setShowEspecieModal] = useState(false);
   const [catalogoCultivos, setCatalogoCultivos] = useState([
-    { id: 1, nombre: 'Tomate', emoji: '🍅', activo: true },
-    { id: 2, nombre: 'Lechuga', emoji: '🥬', activo: true },
-    { id: 3, nombre: 'Zanahoria', emoji: '🥕', activo: true },
-    { id: 4, nombre: 'Brócoli', emoji: '🥦', activo: true },
-    { id: 5, nombre: 'Pimiento', emoji: '🫑', activo: true },
-    { id: 6, nombre: 'Choclo', emoji: '🌽', activo: true },
+    { id: 1, nombre: 'Pimiento Rojo', emoji: '🌶️', activo: true },
+    { id: 2, nombre: 'Pimiento Verde', emoji: '🫑', activo: true },
+    { id: 3, nombre: 'Pimiento amarillo', emoji: '🫑', activo: true },
+    { id: 4, nombre: 'Zapallo', emoji: '🎃', activo: true },
+    { id: 5, nombre: 'Sandía', emoji: '🍉', activo: true },
+    { id: 6, nombre: 'Frutilla', emoji: '🍓', activo: true },
   ]);
 
   return (

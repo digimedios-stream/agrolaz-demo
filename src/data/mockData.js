@@ -15,7 +15,7 @@ export const dashboardStats = {
   produccion: { value: 12, label: 'Cultivos', trend: '+8%', trendUp: true },
   ventas: { value: '$458.000', label: 'USD', trend: '+12%', trendUp: true },
   agroquimicos: { value: 45, label: 'Unidades', alert: 'Bajo', alertType: 'danger' },
-  maquinarias: { value: 8, label: 'Máquinas', alert: '2 Mant.', alertType: 'warning' },
+  maquinarias: { value: 1, label: 'Máquina', alert: 'Operativa', alertType: 'success' },
 };
 
 export const balanceMensual = [
@@ -28,9 +28,9 @@ export const balanceMensual = [
 ];
 
 export const produccionPorHortaliza = [
-  { nombre: 'Tomate', porcentaje: 40, color: '#2D6A4F' },
-  { nombre: 'Lechuga', porcentaje: 25, color: '#52B788' },
-  { nombre: 'Cebolla', porcentaje: 20, color: '#EE9B00' },
+  { nombre: 'Pimiento Rojo', porcentaje: 40, color: '#2D6A4F' },
+  { nombre: 'Zapallo', porcentaje: 25, color: '#52B788' },
+  { nombre: 'Sandía', porcentaje: 20, color: '#EE9B00' },
   { nombre: 'Otros', porcentaje: 15, color: '#9CA3AF' },
 ];
 
@@ -39,7 +39,7 @@ export const ultimasActividades = [
     id: 1,
     actividad: 'Riego Automatizado',
     icono: 'droplets',
-    sector: 'Sector A - Tomates Roma',
+    sector: 'Sector A - Pimientos Rojos',
     fecha: 'Hoy, 08:30 AM',
     estado: 'Completado',
     estadoType: 'success',
@@ -49,7 +49,7 @@ export const ultimasActividades = [
     id: 2,
     actividad: 'Aplicación de Fertilizante',
     icono: 'flask-conical',
-    sector: 'Sector C - Lechugas',
+    sector: 'Sector C - Zapallos',
     fecha: 'Ayer, 04:15 PM',
     estado: 'En Progreso',
     estadoType: 'info',
@@ -69,7 +69,7 @@ export const ultimasActividades = [
     id: 4,
     actividad: 'Mantenimiento Tractor',
     icono: 'tractor',
-    sector: 'Maquinaria #08',
+    sector: 'Tractor 1 Fiat R60',
     fecha: '15 Jun, 07:00 AM',
     estado: 'Completado',
     estadoType: 'success',
@@ -87,9 +87,9 @@ export const produccionStats = {
 export const cultivos = [
   {
     id: 1,
-    hortaliza: 'Tomate',
-    emoji: '🍅',
-    variedad: 'Cherry Red',
+    hortaliza: 'Pimiento Rojo',
+    emoji: '🌶️',
+    variedad: 'California Wonder',
     lote: 'Lote A-12',
     naves: '45 Naves',
     fechaSiembra: '12 Oct 2023',
@@ -99,9 +99,9 @@ export const cultivos = [
   },
   {
     id: 2,
-    hortaliza: 'Lechuga',
-    emoji: '🥬',
-    variedad: 'Romana Verde',
+    hortaliza: 'Pimiento Verde',
+    emoji: '🫑',
+    variedad: 'Cuadrado',
     lote: 'Lote B-04',
     naves: '12 Naves',
     fechaSiembra: '28 Nov 2023',
@@ -111,9 +111,9 @@ export const cultivos = [
   },
   {
     id: 3,
-    hortaliza: 'Zanahoria',
-    emoji: '🥕',
-    variedad: 'Chantenay Red',
+    hortaliza: 'Pimiento amarillo',
+    emoji: '🫑',
+    variedad: 'Golden Sun',
     lote: 'Lote C-09',
     naves: '30 Naves',
     fechaSiembra: '05 Oct 2023',
@@ -123,9 +123,9 @@ export const cultivos = [
   },
   {
     id: 4,
-    hortaliza: 'Brócoli',
-    emoji: '🥦',
-    variedad: 'Calabrese',
+    hortaliza: 'Zapallo',
+    emoji: '🎃',
+    variedad: 'Tetsukabuto',
     lote: 'Lote A-02',
     naves: '22 Naves',
     fechaSiembra: '15 Nov 2023',
@@ -135,9 +135,9 @@ export const cultivos = [
   },
   {
     id: 5,
-    hortaliza: 'Pimiento',
-    emoji: '🫑',
-    variedad: 'California Wonder',
+    hortaliza: 'Sandía',
+    emoji: '🍉',
+    variedad: 'Crimson Sweet',
     lote: 'Lote D-07',
     naves: '18 Naves',
     fechaSiembra: '20 Sep 2023',
@@ -147,28 +147,15 @@ export const cultivos = [
   },
   {
     id: 6,
-    hortaliza: 'Choclo',
-    emoji: '🌽',
-    variedad: 'Dulce Precoz',
+    hortaliza: 'Frutilla',
+    emoji: '🍓',
+    variedad: 'Albion',
     lote: 'Lote E-01',
     naves: '55 Naves',
     fechaSiembra: '01 Oct 2023',
     fechaCultivo: '20 Dic 2023',
     estado: 'Listo para cosechar',
     estadoType: 'warning',
-  },
-  {
-    id: 7,
-    hortaliza: 'Cebolla',
-    emoji: '🧅',
-    variedad: 'Morada',
-    lote: 'Lote F-03',
-    naves: '15 Naves',
-    fechaSiembra: '10 Ago 2023',
-    fechaCultivo: '05 Nov 2023',
-    estado: 'Cosechado',
-    estadoType: 'neutral',
-    rendimiento: '320 Ton',
   },
 ];
 
@@ -226,7 +213,7 @@ export const ventas = [
     fecha: '18 Ago 2023',
     cliente: 'Verdulería Don Pedro',
     clienteCuit: 'CUIT 20-33445...',
-    producto: 'Tomate Cherry',
+    producto: 'Pimiento Rojo',
     cantidad: '2.0 Ton',
     pago: 'Efectivo',
     pagoIcon: 'banknote',
@@ -238,7 +225,7 @@ export const ventas = [
     fecha: '20 Ago 2023',
     cliente: 'Mercado Central',
     clienteCuit: 'CUIT 30-67890...',
-    producto: 'Lechuga Romana',
+    producto: 'Zapallo Tetsukabuto',
     cantidad: '5.0 Ton',
     pago: 'Transf.',
     pagoIcon: 'landmark',
@@ -366,21 +353,18 @@ export const categoriasResumen = [
 
 // --- Maquinarias ---
 export const maquinariasStats = {
-  flotaTotal: { value: 8, extra: '+2 este mes' },
-  operativas: { value: 6, extra: '75% Disponibilidad' },
-  enMantenimiento: { value: 2, hasAlert: true },
-  servicesProximos: { value: 3, hasAlert: true },
+  flotaTotal: { value: 1, extra: 'Total' },
+  operativas: { value: 1, extra: '100% Disponibilidad' },
+  enMantenimiento: { value: 0, hasAlert: false },
+  servicesProximos: { value: 0, hasAlert: false },
 };
 
-export const alertasCriticas = [
-  { id: 1, maquina: 'Cosechadora Case IH', problema: 'Service vencido hace 3 días' },
-  { id: 2, maquina: 'Tractor Massey Ferguson', problema: 'Alerta de presión de aceite hidráulico' },
-];
+export const alertasCriticas = [];
 
 export const maquinarias = [
   {
     id: 1,
-    nombre: 'Tractor John Deere 5075E',
+    nombre: 'Tractor 1 Fiat R60',
     idCode: 'MAQ-2024-001',
     icono: 'tractor',
     horasKm: '1,245 Horas totales',
@@ -389,49 +373,11 @@ export const maquinarias = [
     proximoService: '1500hs',
     serviceProgress: 83,
     serviceLabel: 'Próximo Service (1500hs)',
-  },
-  {
-    id: 2,
-    nombre: 'Cosechadora Case IH',
-    idCode: 'MAQ-2024-042',
-    icono: 'tractor',
-    horasKm: '3,890 Horas totales',
-    estado: 'En Mantenimiento',
-    estadoType: 'warning',
-    proximoService: 'Reparación de Trilla',
-    serviceProgress: 100,
-    serviceLabel: 'Reparación de Trilla',
-    vencido: true,
-  },
-  {
-    id: 3,
-    nombre: 'Tractor Massey Ferguson',
-    idCode: 'MAQ-2023-015',
-    icono: 'tractor',
-    horasKm: '980 Horas totales',
-    estado: 'Operativa',
-    estadoType: 'success',
-    proximoService: '1000hs',
-    serviceProgress: 98,
-    serviceLabel: 'Próximo Service (1000hs)',
-  },
-  {
-    id: 4,
-    nombre: 'Pulverizadora Pla Map 3',
-    idCode: 'MAQ-2024-019',
-    icono: 'spray-can',
-    horasKm: '5,120 Km totales',
-    estado: 'Fuera de Servicio',
-    estadoType: 'danger',
-    proximoService: 'Mantenimiento Preventivo',
-    serviceProgress: 0,
-    serviceLabel: 'Mantenimiento Preventivo',
-  },
+  }
 ];
 
 export const mantenimientoSugerido = [
-  { id: 1, maquina: 'Sembradora Agrometal', tarea: 'Engrase general y revisión de discos' },
-  { id: 2, maquina: 'Tractor John Deere 5075E', tarea: 'Cambio de filtros de aire (50hs restantes)' },
+  { id: 1, maquina: 'Tractor 1 Fiat R60', tarea: 'Cambio de filtros de aire (50hs restantes)' },
 ];
 
 // --- Personal ---
@@ -600,7 +546,7 @@ export const movimientosCombustible = [
     tipo: 'Consumo',
     tipoColor: 'warning',
     origen: 'Cisterna',
-    destino: 'Tractor John Deere 5075E',
+    destino: 'Tractor 1 Fiat R60',
     litros: '- 120 L',
     operario: 'Carlos López',
     odometro: '1,250 hs',
@@ -612,7 +558,7 @@ export const movimientosCombustible = [
     tipo: 'Consumo',
     tipoColor: 'warning',
     origen: 'Bidón #02',
-    destino: 'Pulverizadora Pla',
+    destino: 'Tractor 1 Fiat R60',
     litros: '- 45 L',
     operario: 'Pedro Martínez',
     odometro: '5,125 km',
@@ -636,7 +582,7 @@ export const movimientosCombustible = [
     tipo: 'Consumo',
     tipoColor: 'warning',
     origen: 'Cisterna',
-    destino: 'Cosechadora Case IH',
+    destino: 'Tractor 1 Fiat R60',
     litros: '- 250 L',
     operario: 'Carlos López',
     odometro: '3,892 hs',

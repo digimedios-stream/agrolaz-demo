@@ -163,7 +163,7 @@ export default function Produccion() {
           <div className="produccion__form-row">
             <div className="produccion__form-field">
               <label>Hortaliza <span className="required">*</span></label>
-              <select><option value="">Seleccionar...</option><option>Tomate</option><option>Lechuga</option><option>Zanahoria</option><option>Brócoli</option><option>Pimiento</option><option>Choclo</option></select>
+              <select><option value="">Seleccionar...</option><option>Pimiento Rojo</option><option>Pimiento Verde</option><option>Pimiento amarillo</option><option>Zapallo</option><option>Sandía</option><option>Frutilla</option></select>
             </div>
             <div className="produccion__form-field">
               <label>Variedad <span className="required">*</span></label>

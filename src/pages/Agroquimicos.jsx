@@ -195,10 +195,10 @@ export default function Agroquimicos() {
               <label>Cultivo Destino (Opcional)</label>
               <select>
                 <option value="">Uso General / Sin asignar</option>
-                <option>Lote A-12 - Tomate Cherry</option>
-                <option>Lote B-04 - Lechuga Romana</option>
-                <option>Lote C-09 - Zanahoria</option>
-                <option>Lote D-07 - Pimiento</option>
+                <option>Lote A-12 - Pimiento Rojo</option>
+                <option>Lote B-04 - Zapallo</option>
+                <option>Lote C-09 - Sandía</option>
+                <option>Lote D-07 - Pimiento Verde</option>
               </select>
             </div>
             <div className="agroquimicos__form-field">
@@ -219,10 +219,10 @@ export default function Agroquimicos() {
             <label>Cultivo / Lote Destino <span className="required">*</span></label>
             <select required>
               <option value="">Seleccionar...</option>
-              <option>Lote A-12 - Tomate Cherry</option>
-              <option>Lote B-04 - Lechuga Romana</option>
-              <option>Lote C-09 - Zanahoria</option>
-              <option>Lote D-07 - Pimiento</option>
+              <option>Lote A-12 - Pimiento Rojo</option>
+              <option>Lote B-04 - Zapallo</option>
+              <option>Lote C-09 - Sandía</option>
+              <option>Lote D-07 - Pimiento Verde</option>
             </select>
           </div>
           <div className="agroquimicos__form-field">
@@ -255,7 +255,7 @@ export default function Agroquimicos() {
           </div>
           <div className="agroquimicos__form-field">
             <label>Observaciones / Maquinaria</label>
-            <textarea rows="2" placeholder="Ej: Aplicado con Pulverizadora Pla Map 3..." />
+            <textarea rows="2" placeholder="Ej: Aplicado con Tractor 1 Fiat R60..." />
           </div>
           <div className="agroquimicos__form-actions" style={{ marginTop: '24px' }}>
             <Button variant="outline" onClick={() => setShowAplicacionModal(false)}>Cancelar</Button>

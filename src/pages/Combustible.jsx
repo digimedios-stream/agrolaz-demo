@@ -154,9 +154,7 @@ export default function Combustible() {
                   <label>Maquinaria Destino <span className="required">*</span></label>
                   <select required>
                     <option value="">Seleccionar máquina...</option>
-                    <option>Tractor John Deere 5075E</option>
-                    <option>Cosechadora Case IH</option>
-                    <option>Pulverizadora Pla</option>
+                    <option>Tractor 1 Fiat R60</option>
                   </select>
                 </div>
               </div>

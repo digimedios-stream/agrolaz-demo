@@ -149,7 +149,7 @@ export default function Ventas() {
         <form className="ventas__form" onSubmit={(e) => { e.preventDefault(); setShowModal(false); }}>
           <div className="ventas__form-field">
             <label>Producto <span className="required">*</span></label>
-            <select><option value="">Seleccionar producto...</option><option>Tomate Cherry</option><option>Lechuga Romana</option><option>Trigo Grado 1</option><option>Maíz Pisingallo</option></select>
+            <select><option value="">Seleccionar producto...</option><option>Pimiento Rojo</option><option>Zapallo Tetsukabuto</option><option>Trigo Grado 1</option><option>Maíz Pisingallo</option></select>
           </div>
           <div className="ventas__form-field">
             <label>Cantidad <span className="required">*</span></label>
